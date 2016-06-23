@@ -184,7 +184,7 @@
                     throw new Error('angular-vs-repeat: no ng-repeat directive on a child element');
                 }
 
-                expressionMatches = /^\s*(\S+)\s+in\s+([\S\s]+?)(track\s+by\s+\S+)?$/.exec(ngRepeatExpression);
+                expressionMatches = /^\s*(\S+)\s+in\s+([\S\s]+?)(as\s+(\S+)\s+)?(track\s+by\s+\S+)?$/.exec(ngRepeatExpression);
                 lhs = expressionMatches[1];
                 rhs = expressionMatches[2];
                 rhsSuffix = expressionMatches[3];
